@@ -1,0 +1,16 @@
+import { createApp } from 'vue';
+import App from './App.vue';
+import { createRouter, createWebHistory } from 'vue-router';
+import TextInput from './components/TextInput.vue';
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    { path: '/text-input', component: TextInput }
+  ]
+});
+
+const app = createApp(App);
+
+app.use(router);
+app.mount('#app');
